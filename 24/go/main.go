@@ -78,9 +78,8 @@ func SaveAll(bca []*BruteCombo) error {
 func main() {
 	fmt.Println("Starting bandit 24 brute force")
 	if len(os.Args) < 2 {
-		panic(errors("Not enough arguments. No password found"))
+		panic(errors.New("Not enough arguments. No password found"))
 	}
-	// pass24 := "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ"
 	stats := make([]*BruteCombo, 10000)
 	for i := 0; i < 10000; i++ {
 		stats[i] = &BruteCombo{
